@@ -1,0 +1,6 @@
+How to restore 408.zip from split parts
+
+1) Put all files named 408.zip.part001 ... 408.zip.part013 in the same folder.
+2) Run this command in PowerShell:
+   Get-Content .\408.zip.part* -Encoding Byte -ReadCount 0 | Set-Content .\408.zip -Encoding Byte
+3) Verify file size after restore.
