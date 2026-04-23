@@ -1,0 +1,6 @@
+﻿How to restore 数学.zip from split parts
+
+1) Put all files named 数学.zip.part001 ... 数学.zip.part028 in the same folder.
+2) Run this command in PowerShell:
+   Get-Content .\数学.zip.part* -Encoding Byte -ReadCount 0 | Set-Content .\数学.zip -Encoding Byte
+3) Verify restored file size is 1316597975 bytes.
